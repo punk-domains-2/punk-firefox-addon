@@ -1,0 +1,33 @@
+{
+  "name": "punk-domains-firefox-addon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development && webpack --config ./webpack.config.js && cd dist && web-ext run",
+    "build": "cross-env NODE_ENV=development && webpack --config ./webpack.config.js && cd dist && web-ext build --overwrite-dest",
+    "prod": "cross-env NODE_ENV=production && webpack --config ./webpack.config.js && cd dist && web-ext build --overwrite-dest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.0",
+    "css-loader": "^6.5.1",
+    "generate-json-webpack-plugin": "^2.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^2.4.4",
+    "style-loader": "^3.3.1",
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "web-ext": "^6.8.0",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "ethers": "^5.5.2",
+    "file-loader": "^6.2.0"
+  }
+}
