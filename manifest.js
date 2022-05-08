@@ -2,7 +2,8 @@ module.exports = {
 
   "manifest_version": 2,
   "name": "Punk Domains",
-  "version": "0.0.1",
+  "description": 'This extension allows you to access Web3 domains such as .wagmi, .ape, .klima, .op, .smol, etc.',
+  "version": "1.1",
   "browser_action": {
     "default_icon": {
       "100": "icons/logo.png"
@@ -16,12 +17,6 @@ module.exports = {
   },
   "icons": {
     "100": "icons/logo.png"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "punk@domain.com",
-      "strict_min_version": "50.0"
-    }
   }
 
 }

@@ -40,10 +40,6 @@ export const getTlds = () => {
       "address": "0xb6Cf2874588d0fdFAf9d1b5E254ee6C49110C68B",
       "chainId": 137
     },
-    ".polygon": {
-      "address": "0xa450bc33d0940d25fB0961c592fb440Fa63ABE03",
-      "chainId": 137
-    },
     ".ape": {
       "address": "0x794a8390D94E32b086908D2bA9D66300aA163C62",
       "chainId": 137
