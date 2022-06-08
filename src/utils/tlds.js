@@ -36,10 +36,7 @@ export const getTlds = () => {
     },
   
   
-    ".web3": {
-      "address": "0xb6Cf2874588d0fdFAf9d1b5E254ee6C49110C68B",
-      "chainId": 137
-    },
+
     ".ape": {
       "address": "0x794a8390D94E32b086908D2bA9D66300aA163C62",
       "chainId": 137
