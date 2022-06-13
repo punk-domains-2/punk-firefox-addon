@@ -3,7 +3,7 @@ module.exports = {
   "manifest_version": 2,
   "name": "Punk Domains",
   "description": 'This extension allows you to access Web3 domains such as .ape, .wagmi, .l2, .op, .smol, etc.',
-  "version": "1.2",
+  "version": "1.3",
   "browser_action": {
     "default_icon": {
       "100": "icons/logo.png"
