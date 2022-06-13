@@ -3,7 +3,7 @@
     <div class="container text-center">
       <template v-if="domIsReady">
         <img
-          height="30px"
+          height="50px"
           class="mb-2"
           src="/icons/logo-white512.png"
         />
