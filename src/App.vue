@@ -211,15 +211,15 @@ export default {
         const queryParts = this.domainEntry.split(".");
 
         if (queryParts.length === 2) {
-          const domainName = queryParts[0];
-          const tld = "." + queryParts[1];
+          const domainName = queryParts[0].toLowerCase();
+          const tld = "." + queryParts[1].toLowerCase();
 
           if (Object.keys(getTlds()).includes(tld)) {
             const tldData = getTlds()[tld];
 
             getDomainDataUrl(
               domainName,
-              queryParts[1],
+              queryParts[1].toLowerCase(),
               tldData.address,
               tldData.chainId,
               this.mode
