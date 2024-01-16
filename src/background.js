@@ -21,21 +21,28 @@ browser.webNavigation.onBeforeNavigate.addListener(function(data) {
 
             // check if request comes from a block explorer search
             if (
+              url.href.startsWith("https://arbiscan.io/search?") ||
+              url.href.startsWith("https://basescan.org/search?") ||
+              url.href.startsWith("https://bscscan.com/search?") ||
+              url.href.startsWith("https://etherscan.io/search?") ||
+              url.href.startsWith("https://era.zksync.network/search?") ||
+              url.href.startsWith("https://flare-explorer.flare.network") ||
+              url.href.startsWith("https://ftmscan.com/search?") ||
+              url.href.startsWith("https://gnosisscan.io/search?") ||
+              url.href.startsWith("https://gnosis.blockscout.com") ||
+              url.href.startsWith("https://kromascan.com/search?") ||
+              url.href.startsWith("https://lineascan.build/search?") ||
+              url.href.startsWith("https://nova.arbiscan.io/search?") ||
               url.href.startsWith("https://optimistic.etherscan.io/search?") ||
               url.href.startsWith("https://polygonscan.com/search?") ||
-              url.href.startsWith("https://arbiscan.io/search?")
+              url.href.startsWith("https://scan.zkfair.io") ||
+              url.href.startsWith("https://scrollscan.com/search?") ||
+              url.href.startsWith("https://songbird-explorer.flare.network")
             ) {
               // if so, redirect user to domain owner's address page on block explorer
               getDomainHolder(domainName, tldData.address, tldData.chainId).then(function(result) {
                 if (result && result.startsWith("0x")) {
                   chrome.tabs.update(data.tabId, { url: "https://" + url.host + "/address/" + result });
-                }
-              });
-            } else if (url.href.startsWith("https://blockscout.com/xdai/mainnet/search")) {
-              // gnosis chain explorer support
-              getDomainHolder(domainName, tldData.address, tldData.chainId).then(function(result) {
-                if (result && result.startsWith("0x")) {
-                  chrome.tabs.update(data.tabId, { url: "https://" + url.host + "/xdai/mainnet/address/" + result });
                 }
               });
             } else {

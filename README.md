@@ -6,6 +6,10 @@
 
 - node.js v18
 
+### Increase the version number
+
+Increase the version number in `manifest.js`.
+
 ### Run the build script
 
 Run `sh build.sh` in the root of this folder.
